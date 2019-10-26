@@ -1,40 +1,75 @@
 <template>
   <div class="container">
     <div>
-      <logo />
-      <h1 class="title">
-        portefolio
-      </h1>
-      <h2 class="subtitle">
-        my portefolio project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      <card
+        v-for="ability in skill.frontend"
+        :key="ability.id"
+        :name="ability.name"
+        :logo-path="ability.logoPath"
+      />
+      <card
+        v-for="ability in skill.tools"
+        :key="ability.id"
+        :name="ability.name"
+        :logo-path="ability.logoPath"
+      />
+      <card
+        v-for="ability in skill.backend"
+        :key="ability.id"
+        :name="ability.name"
+        :logo-path="ability.logoPath"
+      />
+      <card
+        v-for="ability in skill.cms"
+        :key="ability.id"
+        :name="ability.name"
+        :logo-path="ability.logoPath"
+      />
+      <card
+        v-for="ability in skill.integration"
+        :key="ability.id"
+        :name="ability.name"
+        :logo-path="ability.logoPath"
+      />
+      <card
+        v-for="ability in skill.container"
+        :key="ability.id"
+        :name="ability.name"
+        :logo-path="ability.logoPath"
+      />
+      <card
+        v-for="ability in skill.database"
+        :key="ability.id"
+        :name="ability.name"
+        :logo-path="ability.logoPath"
+      />
+      <card
+        v-for="ability in skill.system"
+        :key="ability.id"
+        :name="ability.name"
+        :logo-path="ability.logoPath"
+      />
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import data from '~/src/dataAccess.js'
+import card from '~/components/card.vue'
 
 export default {
   components: {
-    Logo
+    card
+  },
+  data() {
+    return {
+      skill: data.competences
+    }
   }
 }
 </script>
 
-<style>
+<style lang="scss">
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -42,6 +77,11 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  > div {
+    display: flex;
+    width: 84%;
+    flex-wrap: wrap;
+  }
 }
 
 .title {

@@ -1,0 +1,57 @@
+{
+  "competences": {
+    "frontend": [
+      { "name": "Html", "logoPath": "/html.png" },
+      { "name": "Css", "logoPath": "/css.png" },
+      { "name": "Scss", "logoPath": "/scss.png" },
+      { "name": "Javascript", "logoPath": "/js.png" },
+      { "name": "TypeScript", "logoPath": "/ts.png" },
+      { "name": "VueJs", "logoPath": "/vuejs.png" },
+      { "name": "Nuxt", "logoPath": "/nuxt.png" }
+    ],
+    "backend": [
+      { "name": "NodeJs", "logoPath": "/nodejs.png" },
+      { "name": "Express", "logoPath": "/expressjs.png" },
+      { "name": "Laravel", "logoPath": "/laravel.png" }
+    ],
+    "cms": [
+      { "name": "Wordpress", "logoPath": "/wordpress.png" },
+      { "name": "Prestashop", "logoPath": "/prestashop.png" }
+    ],
+    "integration": [
+      { "name": "Jenkins", "logoPath": "/jenkins.png" },
+      { "name": "CircleCi", "logoPath": "/circleci.png" }
+    ],
+    "container": [
+      { "name": "Docker", "logoPath": "/docker.png" },
+      { "name": "Kubernetes", "logoPath": "/kubernetes.png" }
+    ],
+    "database": [
+      { "name": "Mysql", "logoPath": "/mysql.png" },
+      { "name": "Mongodb", "logoPath": "/mongodb.png" }
+    ],
+    "tools": [
+      { "name": "Git", "logoPath": "/git.png" },
+      { "name": "Vscode", "logoPath": "/vscode.png" },
+      { "name": "Postman", "logoPath": "/postman.png" },
+      { "name": "StarUML", "logoPath": "/staruml.png" },
+      { "name": "AdobexD", "logoPath": "/adobxd.png" },
+      { "name": "Photoshop", "logoPath": "/photoshop.png" }
+    ],
+    "system": [
+      { "name": "Linux", "logoPath": "/linux.png" },
+      { "name": "Windows", "logoPath": "/windows.png" }
+    ]
+  },
+  "Experience": {},
+  "Formation": {},
+  "Interet": {
+    "Musique": [{ "name": "Guitare", "logoPath": "/html.png" }],
+    "Cinéma": [
+      { "name": "Science fiction", "logoPath": "/html.png" },
+      { "name": "Réalisation", "logoPath": "/html.png" }
+    ],
+    "Sport": ["Tire à l'arc", "Cirque", "Natation", "Volley"],
+    "Voyage": ["Croatie", "Iitalie", "Ecosse", "Espagne", "Allemagne"]
+  }
+}
