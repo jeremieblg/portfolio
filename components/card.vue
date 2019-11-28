@@ -1,5 +1,5 @@
 <template>
-  <div class="card" :class="isOpen">
+  <div class="card">
     <img :src="logoPath" alt />
     <div class="wrapper"></div>
     <div class="text">{{ name }}</div>

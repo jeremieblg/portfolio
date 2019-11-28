@@ -15,6 +15,9 @@
 <script>
 import card from '~/components/card.vue'
 export default {
+  components: {
+    card
+  },
   props: {
     skill: {
       type: Object,
@@ -26,9 +29,6 @@ export default {
       type: String,
       default: ''
     }
-  },
-  components: {
-    card
   },
   data() {
     return {
