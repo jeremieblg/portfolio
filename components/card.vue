@@ -1,9 +1,8 @@
 <template>
   <div class="card" :class="isOpen">
     <img :src="logoPath" alt />
-    <div class="wrapper" @click="openCard()"></div>
+    <div class="wrapper"></div>
     <div class="text">{{ name }}</div>
-    <div v-if="open" class="desc" :class="descOpen" @click="openCard()"></div>
   </div>
 </template>
 
@@ -17,29 +16,6 @@ export default {
     logoPath: {
       type: String,
       default: ''
-    }
-  },
-  data() {
-    return {
-      open: false,
-      isOpen: '',
-      descOpen: ''
-    }
-  },
-  watch: {
-    open(val) {
-      if (val) {
-        this.isOpen = 'card-open'
-        this.descOpen = 'desc-open'
-      } else {
-        this.isOpen = ''
-        this.descOpen = 'desc-close'
-      }
-    }
-  },
-  methods: {
-    openCard() {
-      this.open = !this.open
     }
   }
 }
@@ -102,25 +78,6 @@ $wrapper-color: rgba(121, 120, 120, 0.308);
     opacity: 0;
     background-color: $wrapper-color;
   }
-  .desc {
-    z-index: 2;
-    position: absolute;
-    height: 150px;
-    width: 150px;
-    background-color: gray;
-  }
-  .desc-open {
-    animation-duration: $duration;
-    animation-name: heigher;
-    height: 300px;
-    width: 300px;
-  }
-  .desc-close {
-    animation-duration: $duration;
-    animation-name: no;
-    height: 150px;
-    width: 150px;
-  }
 }
 @keyframes up {
   from {
@@ -138,26 +95,6 @@ $wrapper-color: rgba(121, 120, 120, 0.308);
   }
   100% {
     opacity: 1;
-  }
-}
-@keyframes heigher {
-  0% {
-    height: 150px;
-    width: 150px;
-  }
-  100% {
-    height: 300px;
-    width: 300px;
-  }
-}
-@keyframes no {
-  0% {
-    height: 300px;
-    width: 300px;
-  }
-  100% {
-    height: 150px;
-    width: 150px;
   }
 }
 </style>
