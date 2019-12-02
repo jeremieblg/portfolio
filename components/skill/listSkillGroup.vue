@@ -1,6 +1,6 @@
 <template>
   <div class="list">
-    <block
+    <skillGroup
       v-for="(skill, index) in listSkill"
       :key="skill.id"
       :skill="skill"
@@ -11,11 +11,11 @@
 
 <script>
 import data from '~/src/dataAccess.js'
-import block from '~/components/block.vue'
+import skillGroup from '~/components/skill/skillGroup'
 
 export default {
   components: {
-    block
+    skillGroup
   },
   data() {
     return {

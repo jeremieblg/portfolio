@@ -1,12 +1,12 @@
 <template>
-  <listBlock />
+  <listSkillGroup />
 </template>
 <script>
-import listBlock from '~/components/listBlock.vue'
+import listSkillGroup from '~/components/skill/listSkillGroup'
 
 export default {
   components: {
-    listBlock
+    listSkillGroup
   }
 }
 </script>

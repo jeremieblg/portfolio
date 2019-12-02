@@ -43,15 +43,17 @@
       { "name": "Windows", "logoPath": "/windows.png" }
     ]
   },
+  "Profil": {"presentation":""},
   "Experience": {},
   "Formation": {},
+  "Projet":{},
   "Interet": {
     "Musique": [{ "name": "Guitare", "logoPath": "/html.png" }],
     "Cinéma": [
       { "name": "Science fiction", "logoPath": "/html.png" },
       { "name": "Réalisation", "logoPath": "/html.png" }
     ],
-    "Sport": ["Tire à l'arc", "Cirque", "Natation", "Volley"],
+    "Sport": ["Tir à l'arc", "Cirque", "Natation", "Volley"],
     "Voyage": ["Croatie", "Iitalie", "Ecosse", "Espagne", "Allemagne"]
   }
 }

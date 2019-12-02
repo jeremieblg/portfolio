@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="skill">
     <img :src="logoPath" alt />
     <div class="wrapper"></div>
     <div class="text">{{ name }}</div>
@@ -22,41 +22,44 @@ export default {
 </script>
 <style lang="scss">
 $duration: 0.45s;
-$height-card: 150px;
+$height-skill: 150px;
 $wrapper-color: rgba(121, 120, 120, 0.308);
-.card {
+.skill {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  height: $height-card;
-  width: $height-card;
+  height: $height-skill;
+  width: $height-skill;
   display: flex;
   position: relative;
-  &:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    .text {
-      display: block;
-      animation-duration: $duration;
-      animation-name: up;
-      top: 50%;
-      transform: translateY(-50%);
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
       cursor: pointer;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 700;
-    }
-    .wrapper {
-      animation-duration: $duration;
-      animation-name: transition;
-      opacity: 1;
-    }
-    img {
-      transition: $duration;
-      filter: blur(4px);
+      .text {
+        display: block;
+        animation-duration: $duration;
+        animation-name: up;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+      }
+      .wrapper {
+        animation-duration: $duration;
+        animation-name: transition;
+        opacity: 1;
+      }
+      img {
+        transition: $duration;
+        filter: blur(4px);
+      }
     }
   }
+
   img {
     margin: auto;
-    height: ($height-card - 50px);
+    height: ($height-skill - 50px);
     width: auto;
     z-index: 0;
     filter: blur(0);
@@ -71,8 +74,8 @@ $wrapper-color: rgba(121, 120, 120, 0.308);
     font-family: 'Roboto', sans-serif;
   }
   .wrapper {
-    height: $height-card;
-    width: $height-card;
+    height: $height-skill;
+    width: $height-skill;
     position: absolute;
     z-index: 1;
     opacity: 0;

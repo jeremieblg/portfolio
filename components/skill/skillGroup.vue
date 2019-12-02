@@ -1,8 +1,8 @@
 <template>
-  <div class="block">
-    <span @click="displayCard">{{ capitalizeFirstLetter(title) }}</span>
+  <div class="skillGroup">
+    <span @click="displaySkill">{{ capitalizeFirstLetter(title) }}</span>
     <div v-if="open" class="line">
-      <card
+      <skill
         v-for="ability in skill"
         :key="ability.id"
         :name="ability.name"
@@ -13,14 +13,14 @@
 </template>
 
 <script>
-import card from '~/components/card.vue'
+import skill from '~/components/skill/skill'
 export default {
   components: {
-    card
+    skill
   },
   props: {
     skill: {
-      type: Object,
+      type: Array,
       default() {
         return {}
       }
@@ -39,14 +39,14 @@ export default {
     capitalizeFirstLetter(string) {
       return string.charAt(0).toUpperCase() + string.slice(1)
     },
-    displayCard() {
+    displaySkill() {
       this.open = !this.open
     }
   }
 }
 </script>
 <style lang="scss">
-.block {
+.skillGroup {
   display: flex;
   flex-direction: column;
   width: 84%;
@@ -55,6 +55,7 @@ export default {
     width: max-content;
     cursor: pointer;
     margin-bottom: 5px;
+    user-select: none;
   }
   .line {
     display: flex;
